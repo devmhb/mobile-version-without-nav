@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.hero .hero-info {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.hero .hero-info h1 {
+  font-size: 5rem;
+  text-align: center;
+  font-weight: 500;
+  color: whitesmoke;
+}
+
+.hero .hero-info p {
+  width: 100%;
+  font-size: 1.6rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: whitesmoke;
+}
+
+.hero .hero-info .btn {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.hero .hero-info .btn .button {
+  margin-top: 5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  padding: 2rem 5rem;
+  background-color: rgba(85, 85, 85, 0.5);
+  color: whitesmoke;
+}
+
+.hero .hero-img {
+  height: auto;
+  width: 80%;
+  margin-bottom: 3rem;
+}
+
+.hero .hero-img img {
+  height: 100%;
+  width: 100%;
+}
+
+.about {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 10rem 5rem;
+}
+
+.about .about-info {
+  min-width: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.about .about-info h1 {
+  font-size: 5rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.about .about-info p {
+  width: 80%;
+  font-size: 1.4rem;
+  letter-spacing: 0.01rem;
+}
+
+.about .about-info .btn {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.about .about-info .btn .button {
+  margin-top: 5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  padding: 2rem 5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: whitesmoke;
+}
+
+.about .about-img {
+  margin-top: 3rem;
+  height: auto;
+  max-width: 350px;
+  position: relative;
+}
+
+.about .about-img .img-wraper {
+  position: relative;
+  z-index: 1;
+}
+
+.about .about-img .img-wraper img {
+  height: 100%;
+  width: 100%;
+}
+
+.about .about-img .img-wraper::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -4rem;
+  transform: translateY(-50%);
+  height: 120%;
+  width: 75%;
+  background-color: rgba(34, 33, 33, 0.158);
+  z-index: -1;
+}
+
+.services {
+  height: auto;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.services .services-info {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.services .services-info h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  letter-spacing: 0.2rem;
+}
+
+.services .services-info p {
+  font-size: 1.4rem;
+  letter-spacing: 0.01rem;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.services .services-flipcard {
+  text-align: center;
+}
+
+.services .services-flipcard .flipcard {
+  text-align: center;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 2rem;
+}
+
+.services .services-flipcard .flipcard .card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  transition: 0.5s ease;
+}
+
+.services .services-flipcard .flipcard .front {
+  background-color: rgba(0, 0, 0, 0.13);
+  padding: 10px;
+  transform: rotateY(0deg);
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.services .services-flipcard .flipcard .front i {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.services .services-flipcard .flipcard .front h1 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.services .services-flipcard .flipcard .back {
+  background-color: rgba(0, 0, 0, 0.13);
+  transform: rotateY(180deg);
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.services .services-flipcard .flipcard .back h1 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.services .services-flipcard .flipcard .back p {
+  font-size: 1.4rem;
+  letter-spacing: 0.01rem;
+  width: 100%;
+  padding: 10px;
+}
+
+.services .services-flipcard .flipcard:hover .front {
+  transform: rotateY(180deg);
+  transition: 1s ease;
+}
+
+.services .services-flipcard .flipcard:hover .back {
+  transform: rotateY(0deg);
+  transition: 1s ease;
+}
+
+.services .services-flipcard .flipcard .laptop {
+  background-image: url(images/img-2.jpg);
+  background-size: cover;
+  background-position: center top;
+  color: whitesmoke;
+}
+
+.hire {
+  min-height: 10vh;
+  width: 100%;
+  text-align: center;
+  background-color: #acacac;
+  padding: 5rem 5rem;
+}
+
+.hire h1 {
+  font-size: 2rem;
+}
+
+.hire .btn {
+  margin-top: 3rem;
+}
+
+.hire .btn .button {
+  font-size: 2.2rem;
+  background-color: rgba(116, 107, 107, 0.7);
+  padding: 1rem 3rem;
+  text-decoration: none;
+  color: whitesmoke;
+  transition: 0.4s ease;
+}
+
+.hire .btn .button:hover {
+  background: #000;
+  transition: 0.4s ease;
+}
+
+.footer {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  padding: 5rem 4rem;
+}
+
+.footer .contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .contact-info h1 {
+  font-size: 2.3rem;
+  letter-spacing: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.footer .contact-info p {
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 6px;
+}
+
+.footer .social-links h1 {
+  font-size: 2.3rem;
+  letter-spacing: 0.2rem;
+}
+
+.footer .social-links .social-icon {
+  margin-top: 0.5rem;
+  font-size: 2.5rem;
+}
+
+.footer .social-links .social-icon .fa-facebook-f {
+  margin-right: 0.4rem;
+}
+
+.footer .social-links .social-icon .fa-instagram {
+  margin-right: 0.4rem;
+}
+
+.footer .social-links .social-icon .fa-behance {
+  margin-right: 0.4rem;
+}
+/*# sourceMappingURL=style.css.map */
