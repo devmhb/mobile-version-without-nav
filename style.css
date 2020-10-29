@@ -65,6 +65,12 @@ html {
   padding: 2rem 5rem;
   background-color: rgba(85, 85, 85, 0.5);
   color: whitesmoke;
+  transition: 0.4s ease;
+}
+
+.hero .hero-info .btn .button:hover {
+  background-color: #312121;
+  transition: 0.4s ease;
 }
 
 .hero .hero-img {
@@ -190,14 +196,19 @@ html {
 
 .services .services-flipcard {
   text-align: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
 }
 
 .services .services-flipcard .flipcard {
   text-align: center;
   position: relative;
-  width: 300px;
-  height: 300px;
-  margin: 2rem;
+  width: 80%;
+  min-height: 300px;
+  margin: 0 auto;
 }
 
 .services .services-flipcard .flipcard .card {
@@ -293,6 +304,7 @@ html {
   text-decoration: none;
   color: whitesmoke;
   transition: 0.4s ease;
+  display: inline-block;
 }
 
 .hire .btn .button:hover {
@@ -351,5 +363,55 @@ html {
 
 .footer .social-links .social-icon .fa-behance {
   margin-right: 0.4rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    height: 100vh;
+    padding-left: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero .hero-info {
+    text-align: left;
+    max-width: 30%;
+  }
+  .hero .hero-info h1 {
+    text-align: left;
+    font-size: 5rem;
+    font-weight: 400;
+  }
+  .hero .hero-info p {
+    text-align: left;
+    font-size: 1.4rem;
+    letter-spacing: 0.7rem;
+  }
+  .hero .hero-info .btn {
+    text-align: left;
+  }
+  .hero .hero-img {
+    min-width: 400px;
+    max-width: 1000px;
+  }
+  .about {
+    width: 80%;
+    margin: 0 auto;
+    flex-direction: row;
+  }
+  .about .about-info {
+    padding-right: 13rem;
+  }
+  .about .about-info p {
+    font-size: 1.6rem;
+  }
+  .services .services-info p {
+    margin: 0 auto;
+    max-width: 700px;
+  }
+  .services .services-flipcard {
+    flex-direction: row;
+  }
 }
 /*# sourceMappingURL=style.css.map */

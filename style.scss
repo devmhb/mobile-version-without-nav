@@ -61,6 +61,12 @@ html {
         padding: 2rem 5rem;
         background-color: rgba(85, 85, 85, 0.5);
         color: whitesmoke;
+        transition: 0.4s ease;
+
+        &:hover {
+          background-color: rgb(49, 33, 33);
+          transition: 0.4s ease;
+        }
       }
     }
   }
@@ -188,13 +194,18 @@ html {
 
   .services-flipcard {
     text-align: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
     .flipcard {
       text-align: center;
       position: relative;
-      width: 300px;
-      height: 300px;
-      margin: 2rem;
-
+      width: 80%;
+      min-height: 300px;
+      margin: 0 auto;
       .card {
         position: absolute;
         top: 0;
@@ -285,6 +296,7 @@ html {
       text-decoration: none;
       color: whitesmoke;
       transition: 0.4s ease;
+      display: inline-block;
 
       &:hover {
         background: #000;
@@ -348,3 +360,74 @@ html {
 }
 
 // END FOOTER SECTION
+
+// MEDIA QUERY FOR MOBILE AND TABLET
+
+@media only screen and (min-width: 768px) {
+  // hero section
+  .hero {
+    height: 100vh;
+    padding-left: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .hero-info {
+      text-align: left;
+      max-width: 30%;
+      h1 {
+        text-align: left;
+        font-size: 5rem;
+        font-weight: 400;
+      }
+      p {
+        text-align: left;
+        font-size: 1.4rem;
+        letter-spacing: 0.7rem;
+      }
+
+      .btn {
+        text-align: left;
+      }
+    }
+    .hero-img {
+      min-width: 400px;
+      max-width: 1000px;
+    }
+  }
+  // end hero section
+
+  // about section
+  .about {
+    width: 80%;
+    margin: 0 auto;
+    flex-direction: row;
+
+    .about-info {
+      padding-right: 13rem;
+      p {
+        font-size: 1.6rem;
+      }
+      .btn {
+        // display: inherit;
+      }
+    }
+  }
+  // end about section
+
+  // services section
+  .services {
+    .services-info {
+      p {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+    }
+    .services-flipcard {
+      flex-direction: row;
+    }
+  }
+  //end services section
+}
+//END MEDIA QUERY FOR MOBILE AND TABLET
